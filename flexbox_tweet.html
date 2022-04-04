@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meli's Tweet</title>
+</head>
+<body>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+        }
+        header {
+      display:flex;
+        }
+        header .profile-thumbnail {
+          width: 50px;
+          height: 50px;
+          border-radius: 4px;
+        }
+        header .profile-name {
+      display:flex;
+          margin-left: 10px;
+        }
+        header .follow-btn {
+      display:flex;
+          margin: 0 0 0 auto;
+        }
+        header .follow-btn button {
+          border: 0;
+          border-radius: 3px;
+          padding: 5px;
+        }
+        header h3, header h4 {
+      display:flex;
+          margin: 0 3px 0 3px;
+        }
+        #inner p {
+          margin-bottom: 10px;
+          font-size: 20px;
+        }
+        #inner hr {
+          margin: 20px 0;
+          border-style: solid;
+          opacity: 0.1;
+        }
+        footer {
+      display:flex;
+        }
+        footer .stats {
+      display:flex;
+          font-size: 15px;
+        }
+        footer .stats strong {
+          font-size: 18px;
+        }
+        footer .stats .likes {
+          margin-left: 10px;
+        }
+        footer .cta {
+          margin-left: auto;
+        }
+        footer .cta button {
+          border: 0;
+          background: transparent;
+        }
+      </style>
+      <header>
+        <img src="img/20210511_090941.jpg" 
+        alt="Meli Imelda's profile picture" class="profile-thumbnail">
+        <div class="profile-name">
+          <h3>Meli Imelda</h3>
+          <h4>@Meli_Tchouala</h4>
+        </div>
+        <div class="follow-btn">
+          <button>Follow</button>
+        </div>
+      </header>
+      <div id="inner">
+        <p> I've been taking this course on FreeCodeCamp and it's really amazing what I'm learning.
+            Surprisingly, I've been taking a lot of coding practices for granted 😅.
+            It feels good to code the right way.</p>
+        <span class="date">9:32 PM - 4 April 2022</span>
+        <hr>
+      </div>
+      <footer>
+        <div class="stats">
+          <div class="Retweets">
+            <strong>107</strong> Retweets
+          </div>
+          <div class="likes">
+            <strong>431</strong> Likes
+          </div>
+        </div>
+        <div class="cta">
+          <button class="share-btn">Share</button>
+          <button class="retweet-btn">Retweet</button>
+          <button class="like-btn">Like</button>
+        </div>
+      </footer>
+</body>
+</html>
