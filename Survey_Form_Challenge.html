@@ -1,25 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form Challenge</title>
-</head>
-<body>
-    <div id="main">
-<h1 id="title">Survey Form Challenge</h1>
-<p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Iure at, minima doloribus velit dolore reiciendis nostrum totam hic
-     perspiciatis architecto beatae ab 
-    ducimus assumenda enim. Cupiditate repudiandae dolor ducimus odit.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form Challenge: What's your current mood</title>
+    <style>
+        /* defining colors to be used globally */
+        :root {
+  --color-white: #f3f3f3;
+  --color-darkgreen: #306354;
+  --color-darkgreen-alpha: rgba(27, 50, 35, 0.8);
+  --color-green: #7aa196;
+}
+body {
+  font-family:sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-white);
+  margin: 0;
+}
 
-    <form action="" id="survey-form">
-        <label for="name-label"><input type="text" placeholder="Enter Your Name" name="name-label" id="name"></label>
-        <label for="email-label"><input type="email" placeholder="Enter Your Email" name="email-label" id="email"></label>
-        <label for="number-label"><input type="number" placeholder="Enter Your Number" name="number-label" id="number"  min="0" step="5" max="100"></label>
-    </form>
+body::before {
+  content: ''; 
+  /* The before selector inserts something before the content of each selected element(s). */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkgreen);
+  background-image: linear-gradient(
+      115deg,
+      rgba(181, 241, 226, 0.8),
+      rgba(196, 196, 243, 0.7)
+    ),
+    url("https://devsquad.com/wp-content/uploads/2018/04/HAPPY-CODERs9-750x4101-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  width: 60%;
+  margin: 3.25rem auto 0 auto;
+}
+h1 {
+  font-weight: bolder;
+  line-height: 1.2;
+  color: var(--color-darkgreen);
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+
+form {
+  background: var(--color-darkgreen-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  /* Inherits properties of parent element */
+}
+.form-child {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+.input-block {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-block:focus {
+  border-color: #80ffc0;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 255, 98, 0.25);
+}
+
+        .input-block {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="heading">Survey Form Challenge</h1>
+        <p id="description" class="description">
+          Thank you for taking the time to fill this Form
+        </p>
+      </header>
+      <form class="survey-form">
+          <div class="form-child">
+              <label for="name" id="name-label">What is your Name</label>
+              <input type="text" placeholder="Enter your name" name="name" id="name" class="input-block" required>
+          </div>
+          <div class="form-child">
+            <label id="email-label" for="email">What is your Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="input-block"
+              placeholder="Enter your Email"
+              required
+            />
+          </div>
+          <div class="form-child">
+            <label id="number-label" for="number"
+              >How old are you?</label
+            >
+            <input
+              type="number"
+              name="age"
+              id="number"
+              min="15"
+              max="100"
+              class="input-block"
+              placeholder="Age"
+            />
+          </div>
+          <div class="form-child">
+            <p>What's your current mood?</p>
+            <select id="dropdown" name="role" class="input-block" required>
+              <option disabled selected value>Select the one that applies now</option>
+              <option value="student">Happy 😂</option>
+              <option value="job">Sad😥</option>
+              <option value="learner">Sleepy😴</option>
+              <option value="preferNo">Angry😤</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-child">
+            <p>Do you love coding?</p>
+            <label>
+              <input
+                name="user-agrees"
+                value="definitely"
+                type="radio"
+                class="input-radio"
+                checked
+              />Yes, I do</label
+            >
+            <label>
+              <input
+                name="user-agrees"
+                value="maybe"
+                type="radio"
+                class="input-radio"
+              />Perhaps</label
+            >
+  
+            <label
+              ><input
+                name="user-agrees"
+                value="not-sure"
+                type="radio"
+                class="input-radio"
+              />Not sure</label
+            >
+          </div>
+
+          <div class="form-child">
+            <p>What activity always cheers you up?</p>
+            <textarea
+              id="comments"
+              class="input-text"
+              name="comment"
+              placeholder="Your Answer..."
+            ></textarea>
+          </div>
+  
+          <div class="form-child">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+          </div>
+      </form>
     </div>
-
-</body>
+  </body>
 </html>
