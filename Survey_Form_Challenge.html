@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Survey Form Challenge: What's your current mood</title>
+    <title>Survey Form Challenge</title>
     <style>
         /* defining colors to be used globally */
         :root {
@@ -85,6 +85,10 @@ textarea {
   line-height: inherit;
   /* Inherits properties of parent element */
 }
+button {
+  border: none;
+}
+
 .form-child {
   margin: 0 auto 1.25rem auto;
   padding: 0.25rem;
@@ -93,7 +97,7 @@ textarea {
   display: block;
   width: 100%;
   height: 2.375rem;
-  padding: 0.375rem 0.75rem;
+  /* padding: 0.375rem 0.75rem; */
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
@@ -108,25 +112,45 @@ textarea {
   box-shadow: 0 0 0 0.2rem rgba(0, 255, 98, 0.25);
 }
 
-        .input-block {
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  /* padding: 0.625rem; */
+  resize: vertical;
+}
+.description {
+  font-style: normal;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.text-center {
+  text-align: center;
+}
+.submit-button {
   display: block;
   width: 100%;
-  height: 2.375rem;
-  padding: 0.375rem 0.75rem;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 0.75rem;
+  background: var(--color-green);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
     </style>
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <h1 id="title" class="heading">Survey Form Challenge</h1>
+      <header class="header text-center">
+        <h1 id="title" class="heading">Survey Form Challenge: What's your current mood</h1>
         <p id="description" class="description">
           Thank you for taking the time to fill this Form
         </p>
@@ -207,7 +231,7 @@ textarea {
             <p>What activity always cheers you up?</p>
             <textarea
               id="comments"
-              class="input-text"
+              class="input-textarea"
               name="comment"
               placeholder="Your Answer..."
             ></textarea>
