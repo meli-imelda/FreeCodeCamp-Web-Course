@@ -124,10 +124,27 @@ ul > li > a .nav-link :hover{
   transition: background-color 1s;
 }
 
-/* ***********Our Services************ */
+/* *****************************Our Services********************** */
 #services h2, h3{
   text-align: center;
   margin: 1rem;
+}
+.service-container{
+  display: flex;
+}
+.service-offered-flexbox{
+  /* max-width: 25%; */
+  padding: 2rem;
+}
+.service-image{
+  text-align: center;
+}
+.service-image img{
+  width: 10%;
+  border-radius: 25%;
+}
+.service-offered-flexbox >p {
+  text-align: center;
 }
 @media (max-width: 600px) {
   header {
@@ -161,6 +178,11 @@ ul > li > a .nav-link :hover{
   #call-to-action {
     margin-top: 120px;
   }
+
+  .service-container{
+  display: flex;
+  flex-direction: column;
+}
 }
 
     </style>
@@ -198,7 +220,40 @@ ul > li > a .nav-link :hover{
       <section id="services">
         <h2>Our Services</h2>
         <h3>Here's what we offer!</h3>
+        <div class="service-container">
+
+          <div class="service-offered-flexbox">
+            <div class="service-image">
+              <img src="img/20210511_090941.jpg" alt="">
+            </div>
+            <h3>Description</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo inventore id natus rem 
+              facilis odit aut ab, adipisci modi tenetur voluptatum
+               quisquam praesentium autem perspiciatis eveniet molestias totam itaque odio.</p>  
+          </div>
+
+          <div class="service-offered-flexbox">
+            <div class="service-image">
+              <img src="img/20210511_090941.jpg" alt="">
+            </div>
+            <h3>Description</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo inventore id natus rem 
+              facilis odit aut ab, adipisci modi tenetur voluptatum
+               quisquam praesentium autem perspiciatis eveniet molestias totam itaque odio.</p>  
+          </div>
+
+          <div class="service-offered-flexbox">
+            <div class="service-image">
+              <img src="img/20210511_090941.jpg" alt="">
+            </div>
+            <h3>Description</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo inventore id natus rem 
+              facilis odit aut ab, adipisci modi tenetur voluptatum
+               quisquam praesentium autem perspiciatis eveniet molestias totam itaque odio.</p>  
+          </div>
+           </div>
       </section>
+      <hr>
       
     </div>
   </body>
