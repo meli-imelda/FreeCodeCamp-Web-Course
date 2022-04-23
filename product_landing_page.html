@@ -12,10 +12,11 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        color: #3C414D;
       }
 
       body {
-        background-color: #eee;
+        background-color: rgb(253, 250, 250);
         font-family: "Lato", sans-serif;
       }
 
@@ -28,7 +29,7 @@
       }
 
       a {
-        color: rgb(243, 239, 239);
+        color: #999999;
         text-decoration: none;
       }
 
@@ -43,7 +44,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(12, 10, 10);
+  background-color: #F7F7F7;
 }
 .logo > img {
   width: 5vw;
@@ -66,6 +67,67 @@ nav > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+ul > li > a .nav-link :hover{
+  color: #31CE52;
+}
+
+#call-to-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
+}
+/********************************** Call to Action Section************************* */
+#call-to-action{
+  padding: 3rem;
+  margin: 3rem;
+}
+#call-to-action > h2 {
+  margin:20px 0 0 0;
+  padding-top:60px ;
+  word-wrap: break-word;
+}
+#call-to-action > p {
+  margin:10px 0;
+  font-size: small;
+  font-weight: bold;
+}
+
+#call-to-action input[type='email'] {
+  max-width: 300px;
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 10%);
+}
+
+#call-to-action input[type='submit'] {
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+  border: 0;
+  font-weight: bolder;
+  background-color: #31CE52;
+  color: rgb(253, 250, 250);
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 10%);
+}
+
+#call-to-action input[type='submit']:hover {
+  background-color: #999999;
+  transition: background-color 1s;
+}
+
+/* ***********Our Services************ */
+#services h2, h3{
+  text-align: center;
+  margin: 1rem;
 }
 @media (max-width: 600px) {
   header {
@@ -96,9 +158,10 @@ nav > ul {
     padding-bottom: 5px;
   }
   
+  #call-to-action {
+    margin-top: 120px;
+  }
 }
-
-
 
     </style>
   </head>
@@ -108,15 +171,35 @@ nav > ul {
         <div class="logo">
           <img id="header-img" src="img/company-logo.jpg" alt="Company Logo" />
         </div>
-
         <nav id="nav-bar">
           <ul>
-            <li><a class="nav-link" href="#services">Our Services</a></li>
             <li><a class="nav-link" href="#get-started">Get Started</a></li>
+            <li><a class="nav-link" href="#services">Our Services</a></li>
             <li><a class="nav-link" href="#prices">Prices</a></li>
           </ul>
         </nav>
       </header>
+
+      <section id="call-to-action">
+        <h2>Welcome to TwinRyte! <br>Finally, a Professional Writer for your Business.</h2>
+        <p>Subscribe to our email list</p>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input
+            name="email"
+            id="email"
+            type="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <input id="submit" type="submit" value="Get Started" class="btn" />
+        </form>
+      </section>
+      <hr>
+      <section id="services">
+        <h2>Our Services</h2>
+        <h3>Here's what we offer!</h3>
+      </section>
+      
     </div>
   </body>
 </html>
