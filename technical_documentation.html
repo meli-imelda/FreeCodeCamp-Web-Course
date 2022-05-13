@@ -28,10 +28,32 @@
         border-right: solid;
         border-color: rgba(0, 22, 22, 0.4);
       }
+      #navbar ul {
+        height: 88%;
+        padding: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      #navbar li {
+        color: #4d4e53;
+        border-top: 1px solid;
+        list-style: none;
+        position: relative;
+        width: 100%;
+      }
+
+      #navbar a {
+        display: block;
+        padding: 10px 30px;
+        color: #4d4e53;
+        text-decoration: none;
+        cursor: pointer;
+      }
       header {
         color: black;
-        margin: 10px;
-        text-align: center;
+        margin: 10px 30px;
+        text-align: left;
         font-size: 1.8em;
         font-weight: thin;
       }
@@ -45,6 +67,15 @@
         padding: 20px;
         margin-bottom: 110px;
       }
+      section article {
+        color: #4d4e53;
+        margin: 15px;
+        font-size: 0.96em;
+      }
+      section li {
+        margin: 15px 0px 0px 20px;
+      }
+
   </style>
 </head>
 <body>
@@ -71,6 +102,23 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe non
            excepturi perspiciatis, maiores nemo repellendus similique ea facilis accusantium, 
           natus culpa molestiae ad minima inventore tenetur hic animi sequi obcaecati.</p>
+          <ul>
+            <li>
+              Client-side JavaScript extends the core language by supplying
+              objects to control a browser and its Document Object Model (DOM).
+              For example, client-side extensions allow an application to place
+              elements on an HTML form and respond to user events such as mouse
+              clicks, form input, and page navigation.
+            </li>
+            <li>
+              Server-side JavaScript extends the core language by supplying
+              objects relevant to running JavaScript on a server. For example,
+              server-side extensions allow an application to communicate with a
+              database, provide continuity of information from one invocation to
+              another of the application, or perform file manipulations on a
+              server.
+            </li>
+          </ul>
       </article>
     </section>
   </main>
