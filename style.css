@@ -11,10 +11,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-main{
+/* main{
     padding: 20px;
-}
-
+} */
+a{text-decoration: none;}
 .topnav {
   overflow: hidden;
   background-color: var(--background-color);
@@ -30,10 +30,6 @@ main{
   font-size: 17px;
   font-weight: bold;
 }
-
-/* .topnav a:hover {
-  color: var(--white-color);
-} */
 
 .topnav a.active {
   background-color: var(--main-color);
@@ -52,9 +48,45 @@ main{
     width: 100%;
   }
   
-  .sticky + .content {
+  /* .sticky + .content {
     padding-top: 60px;
+  } */
+
+
+  /* ********************************************** WELCOME SECTION ******************************************** */
+  .welcome{
+    background-image: url("https://meli.traleor.com/medias/meli/images/kirill-balobanov-2rIs8OH5ng0-unsplash.original.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    height: 100vh;
+    width: 100%;
   }
+  .welcome > div{
+    color: var(--white-color);
+    float:right;
+    font-size: 2rem;
+    padding: 20% 8% 0 0;
+  }
+  span{
+    color: var(--main-color);
+  }
+  .know-more{
+    border: none;
+    color: var(--white-color);
+    background-color: var(--main-color);
+    padding: 1rem;
+    border-radius: 25px;
+  }
+  .know-more:hover{
+    cursor: pointer;
+  }
+  .know-more a{
+    color: var(--white-color);
+  }
+ 
+
+  /*********************************************** MEDIA QUERIES ***********************************************/
 
 @media screen and (max-width: 600px) {
   .topnav .right-nav a {
