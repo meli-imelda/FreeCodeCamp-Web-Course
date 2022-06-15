@@ -110,7 +110,19 @@ a{text-decoration: none;}
   .topnav.responsive .right-nav a {
    text-align: center;
   }
-  /* .topnav.responsive .right-nav a:hover{
-   color: #ddd;
-} */
+  /* ************************WELCOME SECTION ******************************** */
+  .welcome{
+    background-image: none;
+    background-color: var(--text-color);
+  }
+  .welcome > div{
+    font-size: larger;
+    text-align: center;
+    font-weight: bold;
+    padding: 10% 0 0 0;
+    float: none;;
+  }
+  .know-more{
+    padding: 0.5rem;
+  }
 }
