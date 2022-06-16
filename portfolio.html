@@ -13,10 +13,10 @@
 
 <body>
 
-<nav class="topnav" id="myTopnav">
+<nav class="topnav" id="navbar">
   <a href="#logo" class="active">Meli Imelda</a>
   <div class="right-nav">
-    <a href="#home">Home</a>
+    <a href="#welcome-section">Home</a>
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
@@ -24,24 +24,82 @@
     <i class="fa fa-bars"></i>
   </a>
   </div>
-  
 
 </nav>
 
 <main>
     <div class="welcome" id="welcome-section">
         <div>
-            <h1>Hi there 👋🏾<br> Welcome on board</h1>
-            <p>I'm <span>Meli Imelda </span> and this is my portfolio</p>
+            <h1>Hi there 👋🏾<br> I'm <span>Meli Imelda </span>
+                </h1>
+            <p>Front-End Wb Developer <br>Content Writer</p>
             <button class="know-more"><a href="#" target="_blank" >Know more</a></button>
         </div>
     </div>
 
+    <div class="project" id="projects">
+        <div class="project-section"> 
+            <h2><span>Projects</span></h2>
+        <h2>Here's a list of a couple of projects I've worked on.
+        </h2> <hr>
+        </div>
+        
+        <div class="project__body">
+            <div class="project-tile">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    Project 1
+                    <img src="https://meli.traleor.com/medias/meli/images/lea-l-4N6qT784t3A-unsplash.original.jpg" alt="Project Profile" >
+                  </div>
+                  <div class="flip-card-back">
+                    <p>This is an</p><h1>Adviz App</h1>
+                    <p>Built with ReactJs</p>
+                    <button class="know-more"><a href="https://adviz.herokuapp.com/" target="_blank" >View</a></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-tile">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    Project 2
+                    <img src="https://meli.traleor.com/medias/meli/images/lea-l-4N6qT784t3A-unsplash.original.jpg" alt="Project Profile">
+                  </div>
+                  <div class="flip-card-back">
+                    <p>This is a</p><h1>RoboFriends App</h1>
+                    <p>Built with ReactJs</p>
+                    <button class="know-more"><a href="https://immense-shore-87931.herokuapp.com/" target="_blank" >View</a></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-tile">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    Project 3
+                    <img src="https://meli.traleor.com/medias/meli/images/lea-l-4N6qT784t3A-unsplash.original.jpg" alt="Project Profile">
+                  </div>
+                  <div class="flip-card-back">
+                    <p>This is a</p><h1>Todo List</h1>
+                    <p>Built with ReactJs</p>
+                    <button class="know-more"><a href="http://her-todos.herokuapp.com/" target="_blank" >View</a></button>
+                  </div>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+
 </main>
+
+<footer>
+    <p>View more projects on  <span><a id="profile-link" href="https://github.com/meli-imelda" target="_blank">Github</a></span></p>
+    <p>Copyright @ <span>Meli Imelda</span></p>
+</footer>
 
 <script>
 function myFunction() {
-  var x = document.getElementById("myTopnav");
+  var x = document.getElementById("navbar");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
